@@ -58,7 +58,7 @@ export function DashboardSidebar() {
       icon: <Settings className="h-5 w-5" />,
     },
     {
-      title: "taklifnomalar",
+      title: "Taklifnomalar",
       href: "/dashboard/invitations",
       icon: <Mail className="h-5 w-5" />,
     },

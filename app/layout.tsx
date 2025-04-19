@@ -1,25 +1,39 @@
-import { Analytics } from "@/components/analytics"
-import { AuthProvider } from "@/components/auth-provider"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import type React from "react"
-import { Suspense } from "react"
-import "./globals.css"
+import { Analytics } from "@/components/analytics";
+import { AuthProvider } from "@/components/auth-provider";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import type React from "react";
+import { Suspense } from "react";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ezgu - O'zbekiston Volontyorlik Platformasi",
   description: "O'zbekistondagi eng yirik volontyorlik platformasi",
-  generator: "v0.dev",
-}
+  generator: "mrhexvel.vercel.app",
+  icons: {
+    icon: "/logo.png",
+  },
+  openGraph: {
+    title: "Ezgu - O'zbekiston Volontyorlik Platformasi",
+    description: "O'zbekistondagi eng yirik volontyorlik platformasi",
+    images: [
+      {
+        url: "/og-image.png",
+      },
+    ],
+    locale: "uz_UZ",
+    type: "website",
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="uz" suppressHydrationWarning>
@@ -35,5 +49,5 @@ export default function RootLayout({
         </AuthProvider>
       </body>
     </html>
-  )
+  );
 }
